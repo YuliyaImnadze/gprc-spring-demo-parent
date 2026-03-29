@@ -1,0 +1,14 @@
+server:
+  port: 8080
+  http2:
+    enabled: true
+
+spring:
+  application:
+    name: pricing-service
+  grpc:
+    server:
+      port: 9090
+    client:
+      default-channel:
+        address: 0.0.0.0:9090
