@@ -1,4 +1,7 @@
 package org.example.orderservice.dto;
 
-public class OrderPriceRequest {
+public record OrderPriceRequest(String productName,
+                                double unitPrice,
+                                int quantity,
+                                double discountPercent) {
 }

@@ -1,4 +1,6 @@
 package org.example.orderservice.dto;
 
-public class OrderPriceResponse {
+public record OrderPriceResponse(double totalWithoutDiscount,
+                                 double discountAmount,
+                                 double finalTotal) {
 }

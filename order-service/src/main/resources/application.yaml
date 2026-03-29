@@ -1,3 +1,18 @@
+server:
+  port: 8082
+
+# для нескольких клиентов (+Bean)
 spring:
-  application:
-    name: order-service
+  name: order-service
+  grpc:
+    client:
+      channels:
+        pricing:
+          address: 127.0.0.1:9090
+
+# для одного клиента.
+#spring:
+#  grpc:
+#    client:
+#      default-channel:
+#        address: 127.0.0.1:9090
